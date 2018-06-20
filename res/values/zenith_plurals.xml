@@ -29,4 +29,8 @@
     <!-- Zenith Maintainer -->
     <string name="maintainer">Maintainer</string>
     <string name="zenith_maintainer">Zenith maintainer</string>
+
+    <!-- Hardware info -->
+    <string name="platform_revision">Platform</string>
+    <string name="total_ram">Total RAM</string>
 </resources>
