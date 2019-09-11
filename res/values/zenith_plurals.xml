@@ -16,4 +16,13 @@
     <!-- String for removal of sensitive info on about, depending on tap -->
     <string name="device_info_protected_single_press">Tap to show info</string>
 
+    <!-- About phone screen, Project Zenith version -->
+    <string name="zenith_version">Zenith version</string>
+    <string name="zenith_version_default">Unknown</string>
+    <string name="keywords_zenith_version">Project Zenith version, zenith version</string>
+
+    <!-- About phone screen, build date -->
+    <string name="build_date">Build date</string>
+    <string name="build_date_default">2015-01-01-0000</string>
+    <string name="keywords_build_date">build date, build info</string>
 </resources>
