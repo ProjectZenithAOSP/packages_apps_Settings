@@ -18,7 +18,7 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:title="@string/about_settings"
+    android:title="Firmware Version"
     settings:keywords="@string/keywords_android_version">
 
 
@@ -31,8 +31,10 @@
     <!-- Device Name -->
     <Preference
         android:key="about_device_name"
+        android:icon="@drawable/user_light"
         android:title="@string/about_device_name"
         android:summary="@string/summary_placeholder"
+        settings:layout="@layout/top_level_preference_top"
         settings:enableCopying="true"
         android:selectable="false"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.AboutDeviceNamePreferenceController"/>
@@ -41,15 +43,19 @@
     <Preference
          android:key="zenith_version"
          android:title="@string/zenith_version"
+         android:icon="@drawable/ic_protonplus_version"
          android:summary="@string/summary_placeholder"
          settings:enableCopying="true"
+         settings:layout="@layout/top_level_preference_middle"
          settings:controller="com.android.settings.deviceinfo.firmwareversion.ZenithVersionPreferenceController"/>
 
     <!-- Zenith maintainer  -->
     <Preference
         android:key="maintainer"
         android:title="@string/maintainer"
+        android:icon="@drawable/ic_settings_display_acc"
         android:summary="@string/summary_placeholder"
+        settings:layout="@layout/top_level_preference_middle"
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.zenith.ZenithMaintainerPreferenceController"/>
 
@@ -58,6 +64,8 @@
     <Preference
         android:key="os_firmware_version"
         android:title="@string/firmware_version"
+        android:icon="@drawable/ic_android_version"
+        settings:layout="@layout/top_level_preference_middle"
         android:summary="@string/summary_placeholder"
         settings:enableCopying="true"
         settings:searchable="false"
@@ -67,8 +75,10 @@
     <Preference
         android:key="security_key"
         android:title="@string/security_patch"
+        android:icon="@drawable/ic_dot_security"
         settings:enableCopying="true"
-        settings:controller="com.android.settings.deviceinfo.firmwareversion.SecurityPatchLevelPreferenceController"/>
+        settings:layout="@layout/top_level_preference_middle"
+         settings:controller="com.android.settings.deviceinfo.firmwareversion.SecurityPatchLevelPreferenceController"/>
 
     <!-- Mainline module version -->
     <!--
@@ -84,9 +94,11 @@
     <Preference
         android:key="base_band"
         android:title="@string/baseband_version"
+        android:icon="@drawable/ic_settings_system_dashboard_acc"
         android:summary="@string/summary_placeholder"
         android:selectable="false"
         settings:enableCopying="true"
+        settings:layout="@layout/top_level_preference_middle"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.BasebandVersionPreferenceController"/>
 
     <!-- Build date -->
@@ -94,6 +106,8 @@
         android:key="build_date"
         android:title="@string/build_date"
         android:summary="@string/build_date_default"
+        android:icon="@drawable/date_range_duotone_line"
+        settings:layout="@layout/top_level_preference_middle"
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.BuildDatePreferenceController"/>
 
@@ -101,7 +115,9 @@
     <Preference
         android:key="kernel_version"
         android:title="@string/kernel_version"
+        android:icon="@drawable/ic_settings_omnigears"
         android:summary="@string/summary_placeholder"
+        settings:layout="@layout/top_level_preference_middle"
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.KernelVersionPreferenceController"/>
 
@@ -119,6 +135,8 @@
         android:key="selinux_status"
         android:title="@string/selinux_status"
         android:summary="@string/selinux_status_enforcing"
+        android:icon="@drawable/lable_light"
+        settings:layout="@layout/top_level_preference_bottom"
         android:selectable="false"
         settings:enableCopying="false"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.SELinuxStatusPreferenceController"/>
