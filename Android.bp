@@ -55,6 +55,9 @@ android_library {
     srcs: [
         "src/**/*.java",
         "src/**/*.kt",
+	"Zenlabs/src/**/*.java",
+	"Zenlabs/src/**/*.kt",
+
     ],
     exclude_srcs: [
         "src/com/android/settings/biometrics/fingerprint2/lib/**/*.kt",
@@ -64,6 +67,10 @@ android_library {
         "res",
         "res-export", // for external usage
         "res-product",
+        "Zenlabs/res",
+    ],
+    aaptflags: ["--extra-packages org.zen.labs",
+                "--extra-packages github.com.st235.lib_expandablebottombar",
     ],
     static_libs: [
         // External dependencies
@@ -113,6 +120,12 @@ android_library {
         "keyboard_flags_lib",
         "vendor.lineage.fastcharge-V1.0-java",
         "custom-preference",
+        "expandable-bottombar",
+        "androidx.navigation_navigation-common-ktx",
+        "androidx.navigation_navigation-fragment-ktx",
+        "androidx.navigation_navigation-runtime-ktx",
+        "androidx.navigation_navigation-ui-ktx",
+        "kotlin-stdlib",
     ],
 
     plugins: [
@@ -177,4 +190,10 @@ android_library_import {
 filegroup {
     name: "Settings_proguard_flags",
     srcs: ["proguard.flags"],
+}
+
+android_library_import {
+    name: "expandable-bottombar",
+    aars: ["libs/lib-expandablebottombar-release.aar"],
+    sdk_version: "current",
 }
