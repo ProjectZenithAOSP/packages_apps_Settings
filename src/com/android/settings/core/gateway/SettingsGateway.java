@@ -209,6 +209,7 @@ import com.android.settings.wifi.tether.WifiTetherSettings;
 
 import ink.kscope.settings.wifi.tether.WifiTetherClientManager;
 import com.android.settings.livedisplay.LiveDisplaySettings;
+import org.zen.labs.Labs;
 
 public class SettingsGateway {
 
@@ -406,7 +407,8 @@ public class SettingsGateway {
             WifiTetherClientManager.class.getName(),
             ZenModesListFragment.class.getName(),
             ZenModeFragment.class.getName(),
-            LiveDisplaySettings.class.getName()
+            LiveDisplaySettings.class.getName(),
+            Labs.class.getName()
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -453,5 +455,6 @@ public class SettingsGateway {
             UserBackupSettingsActivity.class.getName(),
             Settings.MemtagPageActivity.class.getName(),
             Settings.NavigationModeSettingsActivity.class.getName(),
+            Settings.LabsSettingsActivity.class.getName(),
     };
 }

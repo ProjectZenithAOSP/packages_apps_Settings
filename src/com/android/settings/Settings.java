@@ -518,4 +518,7 @@ public class Settings extends SettingsActivity {
 
     // LiveDisplay
     public static class LiveDisplaySettingsActivity extends SettingsActivity { /* empty */ }
+
+    // Zenlabs.
+    public static class LabsSettingsActivity extends SettingsActivity {}
 }
