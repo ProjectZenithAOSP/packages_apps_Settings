@@ -321,7 +321,7 @@
     <string name="dashboard_morning_greeting2">Good day</string>
     <string name="dashboard_noon1">Live your life</string>
     <string name="dashboard_noon2">Enjoy the sunset</string>
-    <string name="dashboard_noon3">Welcome home</string>
+    <string name="dashboard_noon3">Welcome to Project Zenith</string>
     <string name="dashboard_noon4">Enjoy the day!</string>
     <string name="dashboard_noon5">Welcome back</string>
     <string name="dashboard_noon_greeting1">Good afternoon</string>
@@ -344,7 +344,7 @@
     <string name="dashboard_random5">Welcome     </string>
     <string name="dashboard_random6">What\'s up  </string>
     <string name="dashboard_random_greetings1">Try to find some easter eggs!</string>
-    <string name="dashboard_random_greetings2">Let\'s Climb Everest!!</string>
+    <string name="dashboard_random_greetings2">Go and Touch Some Grass!</string>
     <string name="dashboard_random_greetings3">Try using the search bar!</string>
     <string name="dashboard_random_greetings4">Enjoy your day!</string>
     <string name="settings_random1">Searching for something?</string>
