@@ -33,6 +33,12 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.content.Intent;
+import android.content.ComponentName;
+import android.os.UserManager;
+import android.os.UserHandle;
+import android.content.pm.UserInfo;
 
 import androidx.annotation.VisibleForTesting;
 import androidx.fragment.app.Fragment;
@@ -199,6 +205,7 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
                     /* scrollNeeded= */ false);
         }
         super.onStart();
+        initMyAccountCard();
     }
 
     private boolean isOnlyOneActivityInTask() {
@@ -419,6 +426,39 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
     public void setHighlightMenuKey(String menuKey, boolean scrollNeeded) {
         if (mHighlightMixin != null) {
             mHighlightMixin.setHighlightMenuKey(menuKey, scrollNeeded);
+        }
+    }
+
+    private void initPreferenceCard(){
+
+        LayoutPreference myAccount = getPreferenceScreen().findPreference("zenith_my_account");
+        myAccount.setLayoutResource(R.layout.zenith_dashboard_account);
+    }
+
+    private void initMyAccountCard(){
+        final LayoutPreference myAccountPref = getPreferenceScreen().findPreference("zenith_my_account");
+        final Activity context = getActivity();
+
+        View root = myAccountPref.findViewById(R.id.container);
+        ImageView avatarView = myAccountPref.findViewById(R.id.zenith_avatar);
+        TextView ownerName = myAccountPref.findViewById(R.id.zenith_account_owner);
+        Bundle bundle = getArguments();
+        avatarView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_MAIN);
+                intent.setComponent(new ComponentName("com.android.settings","com.android.settings.Settings$UserSettingsActivity"));
+                startActivity(intent);
+            }
+        });
+        final int iconId = bundle.getInt("icon_id", 0);
+        if (iconId == 0) {
+            final UserManager userManager = (UserManager) getActivity().getSystemService(
+                    Context.USER_SERVICE);
+            final UserInfo userInfo = Utils.getExistingUser(userManager,
+                    android.os.Process.myUserHandle());
+            ownerName.setText(userInfo.name);
+            avatarView.setImageDrawable(com.android.settingslib.Utils.getUserIcon(getActivity(), userManager, userInfo));
         }
     }
 
