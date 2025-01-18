@@ -35,6 +35,17 @@
         <item name="android:paddingEnd">4dip</item>
     </style>
 
+    <style name="zenith_text_primary_medium">
+        <item name="android:textSize">19sp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:fontFamily">@*android:string/config_headlineFontFamilyMedium</item>
+    </style>
+
+    <style name="zenith_text_secondary">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+
     <style name="info_value">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
