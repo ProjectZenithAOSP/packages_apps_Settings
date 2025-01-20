@@ -21,6 +21,13 @@
     android:title="@string/firmware_version"
     settings:keywords="@string/keywords_android_version">
 
+
+    <!-- About Banner-->
+    <com.android.settingslib.widget.LayoutPreference
+        android:key="zenith_logo"
+        android:layout="@layout/zenith_logo"
+        android:selectable="false"/>
+
     <!-- Device Name -->
     <Preference
         android:key="about_device_name"
