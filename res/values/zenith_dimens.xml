@@ -1,12 +1,7 @@
-<<<<<<<< HEAD:res/values/zenith_dimens.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright (C) 2007 The Android Open Source Project
      Copyright (C) 20255 Project Zenith
-========
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2024 The Clover Project
 
->>>>>>>> 0f22a799e79 (Settings: Redesign top level settings):res/values/clover_colors.xml
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
